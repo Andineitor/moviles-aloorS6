@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("aloorS6")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1e854d1d51dc829dae7e50b8017c053750326c96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+fa952a885dc4ab761d2d84c270856aa7987bef78")]
 [assembly: System.Reflection.AssemblyProductAttribute("aloorS6")]
 [assembly: System.Reflection.AssemblyTitleAttribute("aloorS6")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

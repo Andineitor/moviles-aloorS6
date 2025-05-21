@@ -28,18 +28,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = aloorS6.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Usuario/OneDrive - Escuela Politécnica Nacional/Documentos/U_ISARAEL/8vo/Moviles/proyectos/aloorS6/aloorS6/AppShell.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = aloorS6.AppShell.xaml
-build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
-build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
-
-[C:/Users/Usuario/OneDrive - Escuela Politécnica Nacional/Documentos/U_ISARAEL/8vo/Moviles/proyectos/aloorS6/aloorS6/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = aloorS6.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
 [C:/Users/Usuario/OneDrive - Escuela Politécnica Nacional/Documentos/U_ISARAEL/8vo/Moviles/proyectos/aloorS6/aloorS6/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = aloorS6.Resources.Styles.Colors.xaml
@@ -57,3 +45,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = aloorS6.Views.vCrud.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\vCrud.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\vCrud.xaml
+
+[C:/Users/Usuario/OneDrive - Escuela Politécnica Nacional/Documentos/U_ISARAEL/8vo/Moviles/proyectos/aloorS6/aloorS6/Views/vPrincipal.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = aloorS6.Views.vPrincipal.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\vPrincipal.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\vPrincipal.xaml

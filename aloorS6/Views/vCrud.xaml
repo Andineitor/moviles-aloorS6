@@ -2,25 +2,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="aloorS6.Views.vCrud"
-             Title="vCrud">
-    <VerticalStackLayout
-        Spacing="20"
-        Margin="20">
-        <Label 
-            Text="CRUD de Estudiantes"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Formulario">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12" BackgroundColor="#F9F9F9">
 
-        <ListView x:Name="lvEstudiantes">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding Name}" TextColor="Red"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+            <Label Text="Nombre"
+                   TextColor="#444"
+                   FontAttributes="Bold"
+                   FontSize="14" />
+            <Entry x:Name="entryName"
+                   Placeholder="Ingresa el nombre"
+                   BackgroundColor="White"
+                   TextColor="#333"
+                   PlaceholderColor="#999"
+                   HeightRequest="40"
+                   Margin="0,0,0,10" />
+
+            <Label Text="Apellido"
+                   TextColor="#444"
+                   FontAttributes="Bold"
+                   FontSize="14" />
+            <Entry x:Name="entryLastName"
+                   Placeholder="Ingresa el apellido"
+                   BackgroundColor="White"
+                   TextColor="#333"
+                   PlaceholderColor="#999"
+                   HeightRequest="40"
+                   Margin="0,0,0,10" />
+
+            <Label Text="Descripción"
+                   TextColor="#444"
+                   FontAttributes="Bold"
+                   FontSize="14" />
+            <Editor x:Name="editorDescription"
+                    Placeholder="Escribe una descripción..."
+                    AutoSize="TextChanges"
+                    BackgroundColor="White"
+                    TextColor="#333"
+                    PlaceholderColor="#999"
+                    HeightRequest="80"
+                    Margin="0,0,0,10" />
+
+            <Label Text="Email"
+                   TextColor="#444"
+                   FontAttributes="Bold"
+                   FontSize="14" />
+            <Entry x:Name="entryEmail"
+                   Placeholder="correo@ejemplo.com"
+                   Keyboard="Email"
+                   BackgroundColor="White"
+                   TextColor="#333"
+                   PlaceholderColor="#999"
+                   HeightRequest="40"
+                   Margin="0,0,0,10" />
+
+            <Picker x:Name="estadoPicker"
+                    Title="Estado"
+                    IsVisible="False"
+                    BackgroundColor="White"
+                    TextColor="#333"
+                    Margin="0,0,0,10">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>ACTIVO</x:String>
+                        <x:String>INACTIVO</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label x:Name="lblErrors"
+                   TextColor="#B00020"
+                   FontAttributes="Italic"
+                   FontSize="12" />
+
+            <Button Text="Guardar"
+                    HorizontalOptions="Center"
+                    TextColor="White"
+                    BackgroundColor="#5A9BD5"
+                    CornerRadius="8"
+                    HeightRequest="45"
+                    WidthRequest="150"
+                    Clicked="OnSubmitClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

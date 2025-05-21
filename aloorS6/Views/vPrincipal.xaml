@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aloorS6.Views.vPrincipal"
+             Title="Reservas"
+             BackgroundColor="#FAFAFA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="10">
+
+            <Button Text="Nueva Reserva"
+                    HorizontalOptions="End"
+                    TextColor="White"
+                    BackgroundColor="#7BAAF7"
+                    Clicked="Button_Clicked"
+                    Margin="0,25"
+                    CornerRadius="8"
+                    HeightRequest="40"
+                    WidthRequest="160" />
+
+            <Label Text="Listado de Reservas"
+                   TextColor="#444"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   FontSize="22"
+                   Margin="0,10" />
+
+            <!-- ENCABEZADO TIPO TABLA -->
+            <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="#DDDDDD" Padding="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" Grid.Column="0"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#EFEFEF"
+                       TextColor="#555"
+                       FontAttributes="Bold" />
+
+                <Label Text="Apellido" Grid.Column="1"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#EFEFEF"
+                       TextColor="#555"
+                       FontAttributes="Bold" />
+
+                <Label Text="Email" Grid.Column="2"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#EFEFEF"
+                       TextColor="#555"
+                       FontAttributes="Bold" />
+
+                <Label Text="Descripción" Grid.Column="3"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#EFEFEF"
+                       TextColor="#555"
+                       FontAttributes="Bold" />
+
+                <Label Text="Estado" Grid.Column="4"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#EFEFEF"
+                       TextColor="#555"
+                       FontAttributes="Bold" />
+
+                <Label Text="Acciones" Grid.Column="5"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#EFEFEF"
+                       TextColor="#555"
+                       FontAttributes="Bold" />
+            </Grid>
+
+            <!-- DATOS TIPO TABLA -->
+            <CollectionView x:Name="listView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="#F0F0F0" Padding="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding name}" Grid.Column="0"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="White"
+                                   TextColor="#333" />
+
+                            <Label Text="{Binding lastName}" Grid.Column="1"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="White"
+                                   TextColor="#333" />
+
+                            <Label Text="{Binding email}" Grid.Column="2"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="White"
+                                   TextColor="#333" />
+
+                            <Label Text="{Binding description}" Grid.Column="3"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="White"
+                                   TextColor="#333" />
+
+                            <Label Text="{Binding statusName}" Grid.Column="4"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="White"
+                                   TextColor="#333" />
+
+                            <HorizontalStackLayout Grid.Column="5"
+                                                   BackgroundColor="White"
+                                                   HorizontalOptions="Center">
+                                <Button Text="✏️"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="#AED581"
+                                        TextColor="White"
+                                        Clicked="OnEditClicked"
+                                        Margin="2"
+                                        CornerRadius="6"
+                                        HeightRequest="34"
+                                        WidthRequest="38" />
+
+                                <Button Text="🗑️"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="#EF9A9A"
+                                        TextColor="White"
+                                        Clicked="OnDeleteClicked"
+                                        Margin="2"
+                                        CornerRadius="6"
+                                        HeightRequest="34"
+                                        WidthRequest="38" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
